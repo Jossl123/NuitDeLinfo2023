@@ -1,87 +1,102 @@
-var story = [
-    {
-        "type": "message",
-        "content": {
-            "msg": "Hi",
-            "next": 3
-        }
-    },
-    {
-        "type": "choice",
-        "content": {
-            "choices" : [
-                {
-                    "msg": "Fine",
-                    "next": 4
-                },
-                {
-                    "msg": "notFine",
-                    "next": 5
-                }
-            ],
-        }
-    },
-    {
-        "type": "ending",
-        "content": {
-            "ending_name": "FEU"
-        }
-    },
-    {
-        "type": "message",
-        "content": {
-            "msg": "How are u ? ",
-            "image": "caca",
-            "next": 1
-        }
-    },
-    {
-        "type": "message",
-        "content": {
-            "msg": "Cool ",
-            "next": 6
-        }
-    },
-    {
-        "type": "message",
-        "content": {
-            "msg": "Not cool why ?  ",
-            "next": 7
-        }
-    },
-    {
-        "type": "choice",
-        "content": {
-            "choices" : [
-                {
-                    "msg": "Yup",
-                    "next": 2
-                },
-                {
-                    "msg": "notFine",
-                    "next": 2
-                }
-            ],
-        }
-    },
-    {
-        "type": "choice",
-        "content": {
-            "choices" : [
-                {
-                    "msg": "Because",
-                    "next": 0
-                },
-                {
-                    "msg": "IDK",
-                    "next": 0
-                }
-            ],
-        }
-    },
-]
+// var currentMsg = 0
+// var messagesDiv = document.getElementById("messages");
 
-var currentMsg = 0
+// function scrollToBottom() {
+//     messagesDiv.scrollTop = messagesDiv.scrollHeight;
+// }
+
+// scrollToBottom();
+
+// function sendMsg(msg, byYou = false){
+//     var newMessage = document.createElement('div');
+//     newMessage.classList.add('message');
+//     if(byYou)newMessage.classList.add('you');
+//     newMessage.textContent = msg;
+//     messagesDiv.appendChild(newMessage);
+//     scrollToBottom();
+// }
+
+// function removeElementsByClass(className){
+//     var elements = document.getElementsByClassName(className);
+//     while(elements.length > 0){
+//         elements[0].parentNode.removeChild(elements[0]);
+//     }
+// }
+
+// function removePreviewsMsg(){
+//     removeElementsByClass("preview")
+// }
+
+// function msgChoosed(choosenId){
+//     removePreviewsMsg()
+//     let choice = story[currentMsg].content.choices[choosenId]
+//     sendMsg(choice.msg, true)
+//     currentMsg = choice.next
+//     computeMsgData(story[currentMsg])
+// }
+
+// function choiceMsgConstructor(idChoice){
+//     let choice = story[currentMsg].content.choices[idChoice]
+//     var newMessage = document.createElement('button');
+//     newMessage.addEventListener("click", (e) => {
+//         msgChoosed(idChoice)
+//     })
+//     newMessage.classList.add('message', 'you', 'preview');
+//     newMessage.textContent = choice.msg;
+//     return newMessage
+// }
+
+// function addPreviewChoices(choices){
+//     for (let i = 0; i < choices.length; i++) {
+//         messagesDiv.appendChild(choiceMsgConstructor(i))
+//     }
+//     scrollToBottom();
+// }
+
+// function computeMsgData(msgData){
+//     switch (msgData.type) {
+//         case "message":
+//             sendMsg(msgData.content.msg)
+//             if ("image" in msgData.content){/*TODO*/}
+//             currentMsg = msgData.content.next
+//             computeMsgData(story[currentMsg])
+//             break;
+    
+//         case "choice":
+//             addPreviewChoices(msgData.content.choices)
+//             break;
+
+//         case "ending":
+//             sendMsg(msgData.content.ending_name)
+//             break;
+            
+//         case "error":
+//             console.log("error with data", msgData)
+//             break
+//         default:
+//             break;
+//     }
+// }
+// async function getMsgData() {
+//     let url = './message.php?id=' + currentMsg;
+//     try {
+//         const response = await fetch(url);
+//         const data = await response.json();
+//         return data;
+//     } catch (err) {
+//         return {"type": "error"};
+//     }
+// }
+
+// async function show() {
+//     let data = await getMsgData();
+//     return data;
+// }
+
+// // Call show and log the result
+// show().then(result => console.log(result));
+
+var currentMsg = 0;
 var messagesDiv = document.getElementById("messages");
 
 function scrollToBottom() {
@@ -90,72 +105,92 @@ function scrollToBottom() {
 
 scrollToBottom();
 
-function sendMsg(msg, byYou = false){
+async function getMsgData(msgId) {
+    let url = './message.php?id=' + msgId;
+    try {
+        const response = await fetch(url);
+        const data = await response.json();
+        return data;
+    } catch (err) {
+        console.error(err);
+        return {"type": "error"};
+    }
+}
+
+async function sendMsg(msg, byYou = false) {
     var newMessage = document.createElement('div');
     newMessage.classList.add('message');
-    if(byYou)newMessage.classList.add('you');
+    if (byYou) newMessage.classList.add('you');
     newMessage.textContent = msg;
     messagesDiv.appendChild(newMessage);
     scrollToBottom();
 }
 
-function removeElementsByClass(className){
+function removeElementsByClass(className) {
     var elements = document.getElementsByClassName(className);
-    while(elements.length > 0){
+    while (elements.length > 0) {
         elements[0].parentNode.removeChild(elements[0]);
     }
 }
 
-function removePreviewsMsg(){
-    removeElementsByClass("preview")
+function removePreviewsMsg() {
+    removeElementsByClass("preview");
 }
 
-function msgChoosed(choosenId){
-    removePreviewsMsg()
-    let choice = story[currentMsg].content.choices[choosenId]
-    sendMsg(choice.msg, true)
-    currentMsg = choice.next
-    computeMsgData(story[currentMsg])
+async function msgChoosed(choice) {
+    removePreviewsMsg();
+    await sendMsg(choice.msg, true);
+    currentMsg = choice.next;
+    await computeMsgData(await getMsgData(currentMsg));
 }
 
-function choiceMsgConstructor(idChoice){
-    let choice = story[currentMsg].content.choices[idChoice]
+function choiceMsgConstructor(choice) {
     var newMessage = document.createElement('button');
     newMessage.addEventListener("click", (e) => {
-        msgChoosed(idChoice)
-    })
+        msgChoosed(choice);
+    });
     newMessage.classList.add('message', 'you', 'preview');
     newMessage.textContent = choice.msg;
-    return newMessage
+    return newMessage;
 }
 
-function addPreviewChoices(choices){
-    for (let i = 0; i < choices.length; i++) {
-        messagesDiv.appendChild(choiceMsgConstructor(i))
+async function addPreviewChoices(msgData) {
+    for (let i = 0; i < msgData.content.choices.length; i++) {
+        messagesDiv.appendChild(choiceMsgConstructor(msgData.content.choices[i]));
     }
     scrollToBottom();
 }
 
-function computeMsgData(msgData){
+async function computeMsgData(msgData) {
     switch (msgData.type) {
         case "message":
-            sendMsg(msgData.content.msg)
-            if ("image" in msgData.content){/*TODO*/}
-            currentMsg = msgData.content.next
-            computeMsgData(story[currentMsg])
+            await sendMsg(msgData.content.msg);
+            if ("image" in msgData.content) {
+                /* TODO */
+            }
+            currentMsg = msgData.content.next;
+            await computeMsgData(await getMsgData(currentMsg));
             break;
     
         case "choice":
-            addPreviewChoices(msgData.content.choices)
+            await addPreviewChoices(msgData);
             break;
 
         case "ending":
-            sendMsg(msgData.content.ending_name)
+            await sendMsg(msgData.content.ending_name);
             break;
             
+        case "error":
+            console.log("error with data", msgData);
+            break;
+
         default:
             break;
     }
 }
 
-computeMsgData(story[currentMsg])
+async function main() {
+    await computeMsgData(await getMsgData(currentMsg));
+}
+
+main();
