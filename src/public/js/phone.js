@@ -1,3 +1,67 @@
+
+
+var story = [
+    {
+        "type": "message",
+        "content": {
+            "msg": "Hi",
+            "next": 3
+        }
+    },
+    {
+        "type": "choice",
+        "content": {
+            "choices" : [
+                {
+                    "msg": "Fine",
+                    "next": 4
+                },
+                {
+                    "msg": "notFine",
+                    "next": 2
+                }
+            ],
+        }
+    },
+    {
+        "type": "ending",
+        "content": {
+            "ending_name": "FEU"
+        }
+    },
+    {
+        "type": "message",
+        "content": {
+            "msg": "How are u ? ",
+            "image": "caca",
+            "next": 1
+        }
+    },
+    {
+        "type": "message",
+        "content": {
+            "msg": "Cool ",
+            "next": 5
+        }
+    },
+    {
+        "type": "choice",
+        "content": {
+            "choices" : [
+                {
+                    "msg": "Fine",
+                    "next": 4
+                },
+                {
+                    "msg": "notFine",
+                    "next": 2
+                }
+            ],
+        }
+    },
+]
+
+var currentMsg = 0
 var messagesDiv = document.getElementById("messages");
 
 function scrollToBottom() {
@@ -6,7 +70,7 @@ function scrollToBottom() {
 
 scrollToBottom();
 
-function sendMsg(msg, byYou){
+function sendMsg(msg, byYou = false){
     var newMessage = document.createElement('div');
     newMessage.classList.add('message');
     if(byYou)newMessage.classList.add('you');
@@ -26,75 +90,39 @@ function removePreviewsMsg(){
     removeElementsByClass("preview")
 }
 
-function msgChoosed(msg){
+function msgChoosed(choosenId){
     removePreviewsMsg()
-    sendMsg(msg)
+    let choice = story[currentMsg].content.choices[choosenId]
+    sendMsg(choice.msg, true)
+    currentMsg = choice.next
+    computeMsgData(story[currentMsg])
 }
 
-function choiceMsgConstructor(msg){
+function choiceMsgConstructor(idChoice){
+    let choice = story[currentMsg].content.choices[idChoice]
     var newMessage = document.createElement('button');
     newMessage.addEventListener("click", (e) => {
-        msgChoosed(msg)
+        msgChoosed(idChoice)
     })
     newMessage.classList.add('message', 'you', 'preview');
-    newMessage.textContent = msg;
+    newMessage.textContent = choice.msg;
     return newMessage
 }
 
 function addPreviewChoices(choices){
-    choices.forEach(choice => {
-        console.log(choice)
-        messagesDiv.appendChild(choiceMsgConstructor(choice))
-    });
+    for (let i = 0; i < choices.length; i++) {
+        messagesDiv.appendChild(choiceMsgConstructor(i))
+    }
     scrollToBottom();
 }
-
-var story = [
-    {
-        "type": "message",
-        "content": {
-            "msg": "kjkldsjfmqfjdskmfqjlmsfj",
-            "next": 3
-        }
-    },
-    {
-        "type": "choice",
-        "content": {
-            "choices" : [
-                {
-                    "msg": "choix 1",
-                    "next": 0
-                },
-                {
-                    "msg": "choix 2",
-                    "next": 2
-                }
-            ],
-        }
-    },
-    {
-        "type": "ending",
-        "content": {
-            "ending_name": "FEU"
-        }
-    },
-    {
-        "type": "message",
-        "content": {
-            "msg": "kjkldsjfmqfjdskmfqjlmsfj",
-            "image": "caca",
-            "next": 1
-        }
-    },
-]
-
-var currentMsg = 0
 
 function computeMsgData(msgData){
     switch (msgData.type) {
         case "message":
             sendMsg(msgData.content.msg)
-            if (msgData.content.hasAttribute("image")){/*TODO*/}
+            if ("image" in msgData.content){/*TODO*/}
+            currentMsg = msgData.content.next
+            computeMsgData(story[currentMsg])
             break;
     
         case "choice":
@@ -102,9 +130,12 @@ function computeMsgData(msgData){
             break;
 
         case "ending":
+            sendMsg(msgData.content.ending_name)
             break;
             
         default:
             break;
     }
 }
+
+computeMsgData(story[currentMsg])
