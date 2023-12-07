@@ -1,0 +1,61 @@
+
+/*css de la page parameters*/
+#parameters{
+    width:100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color:rgb(249, 249, 249);
+    overflow-y: auto;
+}
+#parameters > img{
+    display: flex;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+    align-self: flex-end;
+}
+#parameters > h1{
+    align-self: center;
+}
+#parameters #header{
+    display: flex;
+    align-items: center;
+}
+#parameters #header button{
+    border: none;
+    cursor: pointer;
+    border-radius: 10rem;
+}
+#themes{
+    display: flex;
+    gap: 0.5rem;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.theme{
+    border-radius: 1rem;
+    display: flex;
+    width:8rem;
+    height: 8rem;
+    position: relative;
+}
+.theme > img{
+    border-radius: 1rem;
+    width: 100%;
+    display: flex;
+    object-fit: cover;
+}
+
+#theme1{
+    filter: grayscale(85%);
+}
+
+.lock :last-child{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

@@ -1,0 +1,55 @@
+#discussion{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(236, 226, 226);
+    height: 100%;
+}
+#discussion #header{
+    padding: 10px;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;}
+
+#discussion #type_zone{
+    bottom: 0;
+}
+#messages{
+    margin-top: auto;
+    height: 100%;
+    flex: 1;
+    overflow-y: auto;
+    padding: 0.2rem;
+    gap: 0.1rem;display: flex;
+    flex-direction: column;
+}
+.message{
+    font-weight: 300;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    background-color: white;
+    width: fit-content;
+}
+.fix{
+    flex: 1 1 auto;
+}
+.you{
+    margin-left: auto; 
+    margin-right: 0;
+    background-color: rgb(119, 197, 193) ;
+}
+
+#type_zone{
+    display: flex;
+    padding: 10px;
+    background-color: #f0f0f0;
+}
+#type_zone > input{
+    width: 80%;
+    border: none;
+    border-radius: 1rem;
+}
+#type_zone > button{
+    border: none;
+    border-radius: 1rem;
+}

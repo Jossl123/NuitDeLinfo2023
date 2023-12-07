@@ -1,0 +1,82 @@
+[
+    {
+        "type": "message",
+        "content": {
+            "msg": "Hi",
+            "next": 3
+        }
+    },
+    {
+        "type": "choice",
+        "content": {
+            "choices" : [
+                {
+                    "msg": "Fine",
+                    "next": 4
+                },
+                {
+                    "msg": "notFine",
+                    "next": 5
+                }
+            ]
+        }
+    },
+    {
+        "type": "ending",
+        "content": {
+            "ending_name": "FEU"
+        }
+    },
+    {
+        "type": "message",
+        "content": {
+            "msg": "How are u ? ",
+            "image": "caca",
+            "next": 1
+        }
+    },
+    {
+        "type": "message",
+        "content": {
+            "msg": "Cool ",
+            "next": 6
+        }
+    },
+    {
+        "type": "message",
+        "content": {
+            "msg": "Not cool why ?  ",
+            "next": 7
+        }
+    },
+    {
+        "type": "choice",
+        "content": {
+            "choices" : [
+                {
+                    "msg": "Yup",
+                    "next": 2
+                },
+                {
+                    "msg": "notFine",
+                    "next": 2
+                }
+            ]
+        }
+    },
+    {
+        "type": "choice",
+        "content": {
+            "choices" : [
+                {
+                    "msg": "Because",
+                    "next": 0
+                },
+                {
+                    "msg": "IDK",
+                    "next": 0
+                }
+            ]
+        }
+    }
+]

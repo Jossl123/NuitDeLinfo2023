@@ -1,4 +1,3 @@
-// index.php
 <?php
 
 // require_once __DIR__ . '/vendor/autoload.php';
@@ -13,7 +12,7 @@ $uri = $_SERVER['REQUEST_URI'];
 // Simple routing example
 switch ($uri) {
     case '/':
-        include 'home.php';
+        include 'phone.php';
         break;
     // Handle other routes as needed
 }
