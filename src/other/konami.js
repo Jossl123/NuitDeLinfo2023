@@ -1,4 +1,3 @@
-
 function detectKonamiCode() {
   const konamiCode = [
     "ArrowUp",
@@ -18,12 +17,11 @@ function detectKonamiCode() {
     if (event.key === konamiCode[konamiIndex]) {
       konamiIndex++;
       if (konamiIndex === konamiCode.length) {
-        // Konami code detected, do something here
-        console.log("Konami code detected!");
-        konamiIndex = 0; // Reset index for next detection
+        window.location.href = "Konami.html";
+        konamiIndex = 0;
       }
     } else {
-      konamiIndex = 0; // Reset index if wrong key is pressed
+      konamiIndex = 0; 
     }
   }
 
