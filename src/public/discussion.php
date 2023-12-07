@@ -1,11 +1,9 @@
 <div id="discussion" class="panel">
-    <!-- <button id="params">
-        <div></div>
-        <div></div>
-        <div></div>
-    </button> -->
-    <button id="back" onclick="toConversations()"><-</button>
+    <div id="header">
+        <button id="back" onclick="toConversations()"><-</button>
+    </div>
     <div id="messages">
+        <div class="fix"></div>
     </div>
     <div id="type_zone">
         <input type="text">
