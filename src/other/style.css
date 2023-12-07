@@ -1,0 +1,79 @@
+#duster {
+    position: absolute;
+    top: 0%;
+    left: 84%;
+    transform: rotate(4deg);
+    width: 12%;
+    transition: opacity 1s ease; 
+
+  }
+
+#ryu {
+    position: absolute;
+    top: 40%;
+    left: -10%;
+    width: 8%;
+    display: none;
+    transition-duration: 0.8s;
+  }
+
+#hadouken {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 8%;
+    transition-duration: 0.2s;
+    opacity: 0;
+  }
+
+#hadouken2 {
+    position: absolute;
+    top: 40%;
+    left: 10%;
+    width: 200%;
+    height: 8%;
+    transition-duration: 0.2s;
+    opacity: 0;
+    transition: opacity 1s ease; 
+  }
+
+  body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out infinite;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+.arbres{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 10%;
+    transition: opacity 1s ease; 
+}
+
+body{
+    transition-duration: 1s;
+}
+
+#Hmfwqnj{
+    position: absolute;
+    top: 500%;
+    left: 500%;
+    width: 1240px;
+    height: 1753px;
+}
