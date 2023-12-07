@@ -7,30 +7,19 @@
     <title>Home</title>
     <link rel="stylesheet" href="./css/phone/phone.css">
     <link rel="stylesheet" href="./css/phone/conversations.css">
+    <link rel="stylesheet" href="./css/phone/parameters.css">
     <link rel="stylesheet" href="./css/phone/discussion.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
 </head>
 <body>
     <div id="phone_out">
         <div id="phone">
-            <div id="conversations" class="panel">
-            </div>
-            <div id="discussion" class="panel">
-                <button id="params">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                </button>
-                <div id="messages">
-                </div>
-                <div id="type_zone">
-                    <input type="text">
-                    <button><span class="material-symbols-outlined">send</span></button>
-                </div>
-            </div>
+            <?php include("parameters.php"); ?>
+            <?php include("conversations.php"); ?>
+            <?php include("discussion.php"); ?>
         </div>
     </div>
     <script src="./js/msgLogic.js"></script>
-    <script src="./js/conversations.js"></script>
+    <script src="./js/phone.js"></script>
 </body>
 </html>

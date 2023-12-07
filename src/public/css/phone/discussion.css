@@ -3,7 +3,6 @@
     flex-direction: column;    
     justify-content: end;
     background-color: rgb(236, 226, 226);
-    left: 100%;
     bottom: 0;
 }
 #messages{

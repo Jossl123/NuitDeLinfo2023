@@ -13,7 +13,7 @@ html{
     justify-content: center;
 }
 #phone{
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -29,3 +29,6 @@ html{
     height: 100%;
     width: 100%;
 }
+
+#discussion{left: 100%;}
+#parameters{top: -100%;}
