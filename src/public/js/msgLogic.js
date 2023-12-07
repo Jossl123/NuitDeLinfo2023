@@ -1,5 +1,3 @@
-
-
 var story = [
     {
         "type": "message",
