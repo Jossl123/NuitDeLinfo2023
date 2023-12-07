@@ -1,3 +1,4 @@
+const body = document.querySelector('body');
 const duster = document.querySelector('#duster');
 const ryu = document.querySelector('#ryu');
 const hadouken = document.querySelector('#hadouken');
@@ -34,12 +35,10 @@ function animate() {
     duster.style.top = topDuster + 'px';
     requestAnimationFrame(animate);
   }else if (stopDuster && !vibre) {
-    console.log('boum')
     vibre = true
     shakeScreen()
     setTimeout(shakeScreen, 1500)
     setTimeout(StartForet, 1500)
-    //setInterval(shakeScreen, 1000)
 }
 
 
@@ -89,14 +88,11 @@ function changeBoum(){
   duster.src = "images/boum2.png"
   stopDuster = true
   duster.style.width = '20%'
-  //duster.style.top = (duster.style.top -100)+'px'
-  //duster.style.left= (duster.style.left -300)+'px'
   duster.style.top = '25%'
   duster.style.left = '45%'
 }
 
 function shakeScreen() {
-  console.log('shake')
   document.body.classList.toggle('shake');
 }
 
@@ -104,12 +100,76 @@ function StartForet(){
   hadouken.style.opacity = 0;
   setTimeout(()=>hadouken.style.display = 'none', 1000)
   duster.style.opacity = 0;
-
-  //setTimeout(()=>duster.style.display = 'none', 1000)
-
   ryu.style.transition = 'opacity 1s ease';
   ryu.style.opacity = 0;
-  setTimeout(()=>ryu.style.display = 'none', 1000)
-  setTimeout(()=>duster.style.opacity = 1, 1000)
-  setTimeout(()=>duster.src = "images/arbreColor.png", 1000)
+  setTimeout(()=>displayForet(), 1000)
+
+}
+
+function displayForet(){
+  body.style.backgroundColor = "lightgreen"
+  ryu.style.display = 'none'
+  duster.style.opacity = 1;
+  duster.src = "images/arbreColor.png"
+  i=0
+  setTimeout(()=>  setInterval(() => {
+    if (i < 60){
+      createArbre(i)
+      i++;
+    }
+
+  }, 250-i*2), 1000)
+  //ajouter à la fin
+  var img = document.createElement('img');
+  img.src = "images/Hmfwqnj.png"
+  img.id = "Hmfwqnj"
+  body.appendChild(img);
+}
+
+listArbresLeft = []
+listArbresTop = []
+function createArbre(i){
+  var img = document.createElement('img');
+  img.src = "images/arbre.png"
+  if (i%2 == 0){
+    img.src = "images/arbre2.png"
+  }
+  img.classList.add('arbres')
+
+  var isOverlapping = true;
+  var maxAttempts = 10;
+  var attempt = 0;
+
+  while (isOverlapping && attempt < maxAttempts) {
+    Theleft = Math.random() * (window.innerWidth-50);
+    Thetop = Math.random() * (window.innerHeight -50);
+
+    isOverlapping = checkOverlap(Theleft, Thetop);
+    attempt++;
+  }
+
+  if (!isOverlapping) {
+    listArbresLeft.push(Theleft);
+    listArbresTop.push(Thetop);
+
+    img.style.left = Theleft + 'px';
+    img.style.top = Thetop + 'px';
+    body.appendChild(img);
+  }
+}
+
+function checkOverlap(left, top) {
+  for (var i = 0; i < listArbresLeft.length; i++) {
+    var existingLeft = listArbresLeft[i];
+    var existingTop = listArbresTop[i];
+
+    var horizontalDistance = Math.abs(left - existingLeft);
+    var verticalDistance = Math.abs(top - existingTop);
+
+    if (horizontalDistance < 50 && verticalDistance < 50) {
+      return true; // Overlapping
+    }
+  }
+
+  return false; // Not overlapping
 }

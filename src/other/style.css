@@ -57,3 +57,23 @@
         transform: translateX(5px);
     }
 }
+
+.arbres{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 10%;
+    transition: opacity 1s ease; 
+}
+
+body{
+    transition-duration: 1s;
+}
+
+#Hmfwqnj{
+    position: absolute;
+    top: 500%;
+    left: 500%;
+    width: 1240px;
+    height: 1753px;
+}
