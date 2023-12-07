@@ -71,7 +71,7 @@ function displayHadouken(){
 }
 
 function changeHadouken(){
-  hadouken.src = 'images/hadouken2.png'
+  hadouken.src = './img/imagesKonami/hadouken2.png'
   hadouken.id = 'hadouken2'
   startHaoudken = true
 }
@@ -85,7 +85,7 @@ function explosion(){
 }
 
 function changeBoum(){
-  duster.src = "images/boum2.png"
+  duster.src = "./img/imagesKonami/boum2.png"
   stopDuster = true
   duster.style.width = '20%'
   duster.style.top = '25%'
@@ -110,7 +110,7 @@ function displayForet(){
   body.style.backgroundColor = "lightgreen"
   ryu.style.display = 'none'
   duster.style.opacity = 1;
-  duster.src = "images/arbreColor.png"
+  duster.src = "./img/imagesKonami/arbreColor.png"
   i=0
   setTimeout(()=>  setInterval(() => {
     if (i < 60){
@@ -121,7 +121,7 @@ function displayForet(){
   }, 250-i*2), 1000)
   //ajouter à la fin
   var img = document.createElement('img');
-  img.src = "images/Hmfwqnj.png"
+  img.src = "./img/imagesKonami/Hmfwqnj.png"
   img.id = "Hmfwqnj"
   body.appendChild(img);
 }
@@ -130,9 +130,9 @@ listArbresLeft = []
 listArbresTop = []
 function createArbre(i){
   var img = document.createElement('img');
-  img.src = "images/arbre.png"
+  img.src = "./img/imagesKonami/arbre.png"
   if (i%2 == 0){
-    img.src = "images/arbre2.png"
+    img.src = "./img/imagesKonami/arbre2.png"
   }
   img.classList.add('arbres')
 
