@@ -11,6 +11,11 @@
 <body>
     <div id="phone_out">
         <div id="phone">
+            <button id="params">
+                <div></div>
+                <div></div>
+                <div></div>
+            </button>
             <div id="messages">
             </div>
             <div id="type_zone">

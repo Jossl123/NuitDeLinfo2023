@@ -18,7 +18,7 @@ var story = [
                 },
                 {
                     "msg": "notFine",
-                    "next": 2
+                    "next": 5
                 }
             ],
         }
@@ -41,7 +41,14 @@ var story = [
         "type": "message",
         "content": {
             "msg": "Cool ",
-            "next": 5
+            "next": 6
+        }
+    },
+    {
+        "type": "message",
+        "content": {
+            "msg": "Not cool why ?  ",
+            "next": 7
         }
     },
     {
@@ -49,12 +56,27 @@ var story = [
         "content": {
             "choices" : [
                 {
-                    "msg": "Fine",
-                    "next": 4
+                    "msg": "Yup",
+                    "next": 2
                 },
                 {
                     "msg": "notFine",
                     "next": 2
+                }
+            ],
+        }
+    },
+    {
+        "type": "choice",
+        "content": {
+            "choices" : [
+                {
+                    "msg": "Because",
+                    "next": 0
+                },
+                {
+                    "msg": "IDK",
+                    "next": 0
                 }
             ],
         }
