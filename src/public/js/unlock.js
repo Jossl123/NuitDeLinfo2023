@@ -32,6 +32,7 @@ phoneLock.addEventListener('mousemove', function(e){
     phoneLock.style.transform = `translateY(${Math.min(deltaY,0)}px )`;
     console.log("test")
     const diffdist = phoneLock.getBoundingClientRect().top - phoneUnlock.getBoundingClientRect().top;
+    console.log(-diffdist)
     if(-diffdist > unlockThreshold){
         phoneLock.style.display = 'none';
         clearInterval(idHour);
@@ -47,3 +48,13 @@ phoneLock.addEventListener('mouseup', function(e){
         clearInterval(idHour);
     }
 });
+
+function frame(){
+    const diffdist = phoneLock.getBoundingClientRect().top - phoneUnlock.getBoundingClientRect().top;
+    if(-diffdist > unlockThreshold){
+        phoneLock.style.display = 'none';
+        clearInterval(idHour);
+    }
+    requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
