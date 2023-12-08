@@ -7,6 +7,8 @@
     <div id="messages">
         <div class="fix"></div>
     </div>
+    <div id="choice">
+    </div>
     <div id="type_zone">
         <input type="text">
         <button><span class="material-symbols-outlined">send</span></button>

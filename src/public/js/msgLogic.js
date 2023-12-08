@@ -149,14 +149,15 @@ function choiceMsgConstructor(choice) {
     newMessage.addEventListener("click", (e) => {
         msgChoosed(choice);
     });
-    newMessage.classList.add('message', 'you', 'preview');
+    newMessage.classList.add('message', 'preview');
     newMessage.textContent = choice.msg;
     return newMessage;
 }
 
 async function addPreviewChoices(msgData) {
+    var choiceDiv = document.getElementById("choice");
     for (let i = 0; i < msgData.content.choices.length; i++) {
-        messagesDiv.appendChild(choiceMsgConstructor(msgData.content.choices[i]));
+        choiceDiv.appendChild(choiceMsgConstructor(msgData.content.choices[i]));
     }
     scrollToBottom();
 }
@@ -171,7 +172,7 @@ async function computeMsgData(msgData) {
             currentMsg = msgData.content.next;
             await computeMsgData(await getMsgData(currentMsg));
             break;
-    
+
         case "choice":
             await addPreviewChoices(msgData);
             break;
@@ -179,7 +180,7 @@ async function computeMsgData(msgData) {
         case "ending":
             await sendMsg(msgData.content.ending_name);
             break;
-            
+
         case "error":
             console.log("error with data", msgData);
             break;
