@@ -60,22 +60,3 @@ body{
     max-width: 24px;
     max-height: 24px;
 }
-
-
-#phone-lock{
-    z-index: 100;
-    transition: all 0.5s;
-    background-color: rgb(237, 237, 237);
-    user-select: none;
-}
-#phone-lock > h1{
-    margin: 0;
-    margin-top: 25%;
-    padding: 0;
-    font-size: 3rem;
-    color: black;
-    text-align: center;
-}
-.enlarged{
-    width: 70%;
-}
