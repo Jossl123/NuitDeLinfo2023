@@ -2,10 +2,13 @@
 session_start();
 $raw = file_get_contents('./data.json');
 $data = json_decode($raw);
-if (isset($_SESSION["user"])){
-}else{
-    $userData = array("currentMsg" => 0, "previousMsg" => array(), "themes" => array("default"));
+$themes =["default", "love"];
+if (!isset($_SESSION["user"])){
+    $userData = array("currentMsg" => 0, "previousMsg" => array(), "themes" => array("default"), "currentTheme" => "love");
     $_SESSION["user"] = json_encode($userData);
+}
+function getUserCurrentTheme(){
+    return json_decode($_SESSION["user"], true)["currentTheme"];
 }
 function addPreviousMsg($id){
     $s = json_decode($_SESSION["user"], true);

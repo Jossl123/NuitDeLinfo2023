@@ -48,7 +48,7 @@
     object-fit: cover;
 }
 
-#theme1{
+.lock{
     filter: grayscale(85%);
 }
 

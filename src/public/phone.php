@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./css/phone/conversations.css">
     <link rel="stylesheet" href="./css/phone/parameters.css">
     <link rel="stylesheet" href="./css/phone/discussion.css">
+    <link rel="stylesheet" href="./css/themes/<?php echo getUserCurrentTheme() ?>.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     
 </head>
