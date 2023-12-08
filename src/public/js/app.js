@@ -142,7 +142,7 @@ function windowResized() {
 }  
 
 function preload() {
-    song = loadSound('music.mp3')
+    song = loadSound('./music/music.mp3')
 }
 async function getSong(){
     const response = await loadSong()
