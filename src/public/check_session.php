@@ -4,7 +4,7 @@ $raw = file_get_contents('./data.json');
 $data = json_decode($raw);
 $themes =["default", "love"];
 if (!isset($_SESSION["user"])){
-    $userData = array("currentMsg" => 0, "previousMsg" => array(), "themes" => array("default"), "currentTheme" => "love");
+    $userData = array("currentMsg" => 0, "previousMsg" => array(), "themes" => array("default"), "currentTheme" => "default");
     $_SESSION["user"] = json_encode($userData);
 }
 function getUserCurrentTheme(){
@@ -28,6 +28,11 @@ function setCurrentMsg($id){
 }
 function getUserThemes(){
     return json_decode($_SESSION["user"], true)["themes"];
+}
+function setUserCurrentTheme($theme){
+    $s = json_decode($_SESSION["user"], true);
+    $s["currentTheme"] = $theme;
+    $_SESSION["user"] = json_encode($s);
 }
 function findEnding($endingName){
     $s = json_decode($_SESSION["user"], true);

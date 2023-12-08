@@ -8,10 +8,10 @@
         $userThemes = getUserThemes();
         foreach ($themes as $theme) {
             $owned = in_array($theme, $userThemes);?>
-            <div class="theme <?php if (!$owned)echo "lock" ?>">
+            <<?php if (!$owned) {echo "div";} else {echo "a href='./changeTheme?theme=".$theme."'";} ?> class="theme <?php if (!$owned)echo "lock" ?>">
                 <img src="./img/<?= $theme ?>.jpg">
                 <?php if (!$owned){ ?><img src="./img/lock.png" alt="lock" ><?php } ?>
-            </div>
+            </<?php if (!$owned) {echo "div";} else {echo "a";} ?>>
         <?php } ?>
     </div>
-</div>        
+</div>

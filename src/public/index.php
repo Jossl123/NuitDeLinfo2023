@@ -1,23 +1,25 @@
 <?php
-
-// require_once __DIR__ . '/vendor/autoload.php';
-// require_once __DIR__ . '/includes/config.php';
-// require_once __DIR__ . '/includes/database.php';
-// require_once __DIR__ . '/includes/functions.php';
-
-// ... (Initialize configurations, database connection, etc.)
-
-$uri = $_SERVER['REQUEST_URI'];
+$requestUri = $_SERVER['REQUEST_URI'];
+$uriComponents = parse_url($requestUri);
+$path = $uriComponents['path'];
 
 // Simple routing example
-switch ($uri) {
+include("check_session.php");
+switch ($path) {
     case '/':
         include 'phone.php';
         break;
     case '/restart':
-        echo "yolo";
-        include("check_session.php");
         $_SESSION = array();
+        header('Location: /');
+        break;
+    case '/changeTheme':
+        if (isset($_GET['theme'])) {
+            $userThemes = getUserThemes();
+            if (in_array($_GET['theme'], $userThemes)){
+                setUserCurrentTheme($_GET['theme']);
+            }
+        }
         header('Location: /');
         break;
     // Handle other routes as needed
