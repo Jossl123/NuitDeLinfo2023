@@ -76,8 +76,8 @@
                     "next": 3
                 },
                 {
-                    "msg": "La fonte des calottes glaciaires, c'est comme un rebondissement dans notre propre film de la vie réelle. On a besoin de héros pour sauver la situation. Peut-être que nous pouvons être ces héros, tu sais ? Réduire, réutiliser, recycler – c'est comme notre mantra de super-héros contre le changement climatique. Écrivons une fin heureuse pour la planète !",
-                    "next": 3
+                    "msg": "La fonte des calottes glaciaires, c'est un rebondissement dans notre film de vie réelle. Devenons les héros avec le mantra : réduire, réutiliser, recycler. Écrivons une fin heureuse pour la planète !",
+                    "next": 8
                 },
                 {
                     "msg": "Ouais, la fonte des calottes glaciaires, mec. C'est comme si le café du monde était dilué – pas cool. On devrait probablement faire quelque chose à ce sujet. Peut-être avoir plus de gobelets à café écologiques ou quelque chose comme ça. Je dis juste, gardons notre planète aussi géniale que notre café du matin, non ?",
@@ -98,15 +98,15 @@
         "content": {
             "choices": [
                 {
-                    "msg": "La déforestation, ouais, c'est déprimant. Peut-être que si tout le monde plantait un arbre pour son anniversaire, on pourrait équilibrer les choses, tu sais ? Comme faire une fête mondiale des arbres d'anniversaire. Simple, amusant, et on sauve les arbres. Qu'en penses-tu ?",
+                    "msg": "J'aime beaucoup l'argent et l'argent viens des arbres, donc plus ont coupe d'arbres plus d'argent on aura!",
                     "next": 3
                 },
                 {
-                    "msg": "La déforestation me dérange aussi. Et si on en faisait un projet cool ? Réunir des gens pour construire des choses en bois récupéré, promouvoir le recyclage et rendre sa tendance. On pourrait commencer tout un mouvement 'Sauvons les arbres, Style DIY'. C'est pratique et branché !",
+                    "msg": "La déforestation me dérange aussi. Pourquoi ne pas en faire un projet cool ? Rassemblons des gens pour construire avec du bois récupéré, encourageons le recyclage, lançons un mouvement 'Sauvons les arbres, Style DIY'. Pratique et tendance !",
                     "next": 10
                 },
                 {
-                    "msg": "La déforestation est un gros problème, sans aucun doute. Mais soyons réalistes, simplement demander aux gens d'arrêter ne suffira pas. Nous avons besoin de politiques qui rendent les entreprises responsables de leurs actions. Peut-être quelques avantages fiscaux pour ceux qui adoptent des pratiques écologiques. Les toucher au portefeuille, et peut-être qu'ils réfléchiront à deux fois.",
+                    "msg": "La déforestation ? Pff, plantons encore plus d'arbres pour résoudre le problème, comme s'il n'y avait pas assez de bois déjà.",
                     "next": 3
                 }
             ]
@@ -124,15 +124,15 @@
         "content": {
             "choices": [
                 {
-                    "msg": "Absolument ! Les énergies renouvelables sont comme les super-héros du changement climatique. Imagine un monde où notre énergie vient du soleil, du vent et de l'eau. Il suffit d'investir davantage dans les technologies d'énergie propre, peut-être ajouter des incitations aux initiatives écologiques. Ce n'est pas seulement une solution, c'est un avenir lumineux et durable !",
+                    "msg": "Pas fou, en vrai. J'aime pas les éoliennes quand on les installe à côté de chez moi xD",
                     "next": 3
                 },
                 {
-                    "msg": "Les énergies renouvelables ont du sens, tu sais ? Moins de pollution, moins de gaz à effet de serre. Nous devrions certainement faire la transition. Peut-être commencer petit, comme plus de panneaux solaires sur les maisons et des parcs éoliens. Ça ne se fera pas du jour au lendemain, mais un changement progressif pourrait faire une grande différence à long terme.",
+                    "msg": "Les énergies renouvelables, moins de pollution, moins de gaz à effet de serre, une transition nécessaire. Commencer avec des panneaux solaires et des parcs éoliens. Un changement progressif, bien que prenant du temps, apportera une grande différence à long terme.",
                     "next": 12
                 },
                 {
-                    "msg": "Les énergies renouvelables, c'est bien sur le papier, mais peuvent-elles vraiment répondre à nos besoins énergétiques massifs ? Nous devrions investir dedans, bien sûr, mais soyons aussi réalistes. Peut-être un mélange d'énergies renouvelables et l'amélioration de l'efficacité énergétique pourrait être la solution. C'est un casse-tête difficile, et nous devons trouver les bonnes pièces.",
+                    "msg": "Les énergies renouvelables ? C'est une arnaque. On devrait investir dans des usines à charbon plus grandes et plus polluantes.",
                     "next": 3
                 }
             ]
@@ -150,15 +150,15 @@
         "content": {
             "choices": [
                 {
-                    "msg": "Bien sûr ! C'est comme si tout le monde donnait un peu, ça s'additionnent, tu sais ? Des trucs simples comme le recyclage, économiser de l'énergie, utiliser des produits écologiques – ça peut sembler petit, mais imaginez si tout le monde le faisait. Nous serions comme un million de petits héros sauvant la journée, une petite action à la fois.",
+                    "msg": "Les individus font une différence ? Non, c'est la nature qui décide tout. On ne peut rien y faire.",
                     "next": 3
                 },
                 {
-                    "msg": "Absolument ! Les individus ont le pouvoir de provoquer un changement. Imaginez si chacun de nous faisait des choix conscients – de réduire les plastiques à usage unique à soutenir des marques durables. Cela crée un effet domino. Nos actions collectives peuvent envoyer un message et pousser à des changements systémiques plus importants. Ça commence avec nous !",
+                    "msg": "C'est la faute des grandes entreprises, j'ai pas de pouvoir pour changer la planète :(",
                     "next": 3
                 },
                 {
-                    "msg": "Bien sûr, les individus peuvent faire la différence, mais soyons réalistes. Nous avons besoin de plus que des efforts personnels. Il s'agit d'influencer les politiques, de rendre les entreprises responsables et de plaider en faveur d'un changement systémique. Alors oui, fais ta part, mais participe aussi à la grande conversation pour avoir un impact durable.",
+                    "msg": "Les individus ont un impact, mais soyons réalistes. Influencer les politiques, rendre les entreprises responsables et plaider pour un changement systémique sont essentiels. Fais ta part, participe à la conversation pour un impact durable.",
                     "next": 14
                 }
             ]
@@ -176,16 +176,12 @@
         "content": {
             "choices": [
                 {
-                    "msg": "Je comprends, les gens ont différentes perspectives. Peut-être qu'au lieu de pousser des faits, nous pourrions commencer par écouter leurs préoccupations. Partager des histoires personnelles sur comment le changement climatique a affecté directement les gens. Parfois, se connecter sur un niveau humain peut faire tomber les murs du scepticisme.",
+                    "msg": "Les sceptiques du changement climatique ont raison. Tout cela, c'est juste une ruse pour vendre des parapluies plus chers.",
                     "next": 3
                 },
                 {
-                    "msg": "Le scepticisme est naturel, mais nous pouvons y répondre en présentant des preuves scientifiques claires et compréhensibles. Organiser des discussions communautaires ou partager des documentaires qui décomposent les faits. Communiquer la science sans être trop accablant pourrait aider à combler le fossé et à favoriser la compréhension.",
+                    "msg": "Face au scepticisme, des preuves scientifiques claires, des discussions communautaires et des documentaires explicatifs peuvent combler le fossé et favoriser la compréhension.",
                     "next": 16
-                },
-                {
-                    "msg": "Parfois, il s'agit de créer un sentiment de communauté autour de la question. Organiser des événements où les gens peuvent discuter de leurs préoccupations, partager des informations et apprendre les uns des autres. Construire une compréhension collective peut aider à dissiper le scepticisme et à créer une communauté plus informée et connectée.",
-                    "next": 3
                 }
             ]
         }
@@ -202,15 +198,11 @@
         "content": {
             "choices": [
                 {
-                    "msg": "Je crois que les gouvernements ont un rôle crucial à jouer, et certains font des progrès. Nous avons besoin d'une coopération internationale plus forte, de politiques ambitieuses et d'investissements substantiels dans des initiatives vertes. Si les gouvernements montrent l'exemple, cela prépare le terrain pour un mouvement mondial vers un avenir plus durable.",
+                    "msg": "Les gouvernements font bien plus que nécessaire. Ils devraient dépenser plus d'argent pour détruire l'environnement, c'est bien plus amusant.",
                     "next": 3
                 },
                 {
-                    "msg": "Eh bien, c'est mitigé. Certains gouvernements font des pas significatifs, mais d'autres semblent lents à agir. Nous avons besoin de politiques plus cohérentes et strictes au niveau mondial. Peut-être que si les citoyens poussent pour le changement, les gouvernements ressentiront la pression de prioriser l'environnement plutôt que des gains à court terme.",
-                    "next": 3
-                },
-                {
-                    "msg": "Les gouvernements ont un rôle, sans aucun doute. Il ne s'agit pas seulement de faire plus, mais de faire les bonnes choses. Des politiques intelligentes, des incitations pour les industries vertes et une focalisation sur la collaboration internationale pourraient avoir un impact réel. Il s'agit de trouver des solutions efficaces plutôt que de simplement faire plus de la même chose.",
+                    "msg": "Les gouvernements ont un rôle crucial. Il faut faire les bonnes choses : politiques intelligentes, incitations pour les industries vertes, collaboration internationale. Il s'agit de solutions efficaces, pas simplement de faire plus.",
                     "next": 18
                 }
             ]
@@ -228,16 +220,12 @@
         "content": {
             "choices": [
                 {
-                    "msg": "Absolument ! Cela peut sembler décourageant, mais je pense que si nous travaillons tous ensemble – individus, communautés et gouvernements – nous pouvons inverser la tendance. Les progrès technologiques, la sensibilisation croissante et la passion des gens me donnent l'espoir que nous pouvons construire un avenir plus durable et résilient.",
+                    "msg": "L'avenir ? Qui s'en soucie ? Vivons simplement dans le moment présent et oublions ce truc de changement climatique.",
                     "next": 3
                 },
                 {
-                    "msg": "Ce ne sera pas facile, mais je crois en notre capacité à nous adapter et à changer. Si nous faisons les bons choix dès maintenant, investissons dans des pratiques durables et favorisons une mentalité mondiale, nous pouvons naviguer à travers ces défis. Il s'agit de trouver l'équilibre entre l'optimisme et les mesures pratiques nécessaires pour un avenir meilleur.",
+                    "msg": "Difficile, mais en faisant des choix durables, on peut naviguer vers un avenir meilleur.",
                     "next": 20
-                },
-                {
-                    "msg": "Inverser la tendance ne sera pas une partie de plaisir, mais je pense que nous pouvons faire des progrès significatifs. Cela demande un effort collectif, des politiques intelligentes et un changement de mentalité. Nous ne résoudrons peut-être pas tout, mais avec les bonnes actions, nous pouvons certainement créer un monde plus durable et résilient.",
-                    "next": 3
                 }
             ]
         }
