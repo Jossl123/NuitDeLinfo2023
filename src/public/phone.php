@@ -1,4 +1,4 @@
-<!-- home.php -->
+<?php include("check_session.php"); ?>
 <!DOCTYPE html>
 <html lang="en">
 <head>

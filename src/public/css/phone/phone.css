@@ -3,7 +3,11 @@ html{
     height: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+/* body{
+    perspective: 100rem;
+} */
 #phone_out{
+    transition: transform 0.5s;
     width: 42vh;
     height: 80vh;
     background-color: black;
@@ -12,6 +16,18 @@ html{
     align-items: center;
     justify-content: center;
 }
+/* @keyframes rotateAnimation {
+    0% {
+        transform: rotateY(0deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+#phone_out:hover{
+    animation: rotateAnimation 2s infinite linear;
+} */
 #phone{
     overflow: hidden;
     position: relative;
