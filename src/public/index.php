@@ -22,5 +22,8 @@ switch ($path) {
         }
         header('Location: /');
         break;
+    case '/rythm':
+        include 'rythm.php';
+        break;
     // Handle other routes as needed
 }

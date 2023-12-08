@@ -195,3 +195,8 @@ async function main() {
 }
 
 main();
+
+
+function youKnowWhatItMeans(){
+    document.location.href="/rythm"
+}
