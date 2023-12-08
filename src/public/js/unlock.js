@@ -5,7 +5,7 @@ function updateHour(){
     document.getElementById('hour').innerHTML = `${hour}:${minute}`;
 }
 const idHour = setInterval(updateHour, 10000);
-updateHour(); 
+updateHour();
 
 const phoneLock = document.getElementById('phone-lock');
 const phoneUnlock = document.getElementById('phone');
@@ -28,12 +28,7 @@ phoneLock.addEventListener('mousemove', function(e){
             phoneLock.style.display = 'none';
             clearInterval(idHour);
             const stat = document.getElementById('stat');
-            stat.style.visibility = 'visible';
-            for(let i = 0 ; i < 71; i++){
-                setTimeout(() => {
-                        stat.style.width = `${i}%`;
-                }, 10000);
-            }
+            stat.classList.toggle("enlarged")
         }
     }
 });

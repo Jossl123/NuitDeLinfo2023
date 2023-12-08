@@ -15,6 +15,7 @@
 <body>
     <div id="phone_out">
         <div id="phone">
+            <?php include("lock.php"); ?>
             <?php include("parameters.php"); ?>
             <?php include("conversations.php"); ?>
             <?php include("discussion.php"); ?>
