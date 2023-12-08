@@ -147,7 +147,7 @@ function choiceMsgConstructor(choice) {
     newMessage.addEventListener("click", (e) => {
         msgChoosed(choice);
     });
-    newMessage.classList.add('message', 'preview');
+    newMessage.classList.add('message', 'preview', "you");
     newMessage.textContent = choice.msg;
     return newMessage;
 }
