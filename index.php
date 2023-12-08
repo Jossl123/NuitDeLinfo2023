@@ -5,19 +5,10 @@
     <title>Document</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/p5@1/lib/p5.min.js"></script>
+    <script src="p5.sound.js"></script>
+    <script src="app.js"></script>
 </head>
 <body>
-    <div id="wrapper">
-        <!--- load a music .mp3 file-->
-        <audio id="audio" src="music.mp3" preload="auto"></audio>
-        <div id="drop-circle-area">
-        </div>
-        <div id="click-area">
-            <div class="circle">circle</div>
-            <div class="circle">circle</div>
-            <div class="circle">circle</div>
-            <div class="circle">circle</div>
-        </div>
-    </div>
 </body>
 </html>
