@@ -2,8 +2,11 @@
 include("check_session.php");
 header('Content-Type: application/json');
 
-function sendMsgData($data, $id){
-    setCurrentMsg($id);
+function sendMsgData($data, $id, $add = true){
+    if ($add){
+        setCurrentMsg($id);
+        addPreviousMsg($id);
+    }    
     echo json_encode($data[$id]);
 }
 
@@ -13,8 +16,6 @@ if (isset($_GET['id'])) {
 
     $previousMsg=getCurrentMsg();
 
-
-
     $raw = file_get_contents('./data.json');
     $data = json_decode($raw);
     
@@ -22,7 +23,7 @@ if (isset($_GET['id'])) {
         echo json_encode('{"error": "ça marche pas :c"}');
         return;
     }
-    if($id == $previousMsg)return sendMsgData($data, $id);
+    if($id == $previousMsg)return sendMsgData($data, $id, false);
     if(isset($data[$previousMsg]->content->choices)){
         for ($i=0; $i < count($data[$previousMsg]->content->choices); $i++) { 
             if ($data[$previousMsg]->content->choices[$i]->next == $id){

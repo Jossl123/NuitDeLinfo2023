@@ -21,7 +21,8 @@
         </div>
     </div>
     <script>
-    var currentMsg = <?php echo getCurrentMsg(); ?>
+    var currentMsg = <?php echo getCurrentMsg(); 
+    ?>
     </script>
     <script src="./js/msgLogic.js"></script>
     <script src="./js/phone.js"></script>
