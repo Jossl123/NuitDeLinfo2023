@@ -64,7 +64,10 @@
     left: 0%;
     width: 10%;
     transition: opacity 1s ease; 
+    opacity: 0;
 }
+
+
 
 body{
     transition-duration: 1s;
