@@ -14,6 +14,24 @@
     
 </head>
 <body>
+    <style>.snowflake {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    pointer-events: none;
+}</style>
+    <?php if(getUserCurrentTheme() == "snow"){?> 
+    <div id="snow-container" style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: 9999;"></div>
+    <?php } ?>
     <div id="phone_out">
         <div id="phone">
             <?php if (isFirstConnection()) {include("lock.php");} ?>

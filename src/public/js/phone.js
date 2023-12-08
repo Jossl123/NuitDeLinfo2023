@@ -41,3 +41,32 @@ document.addEventListener('mousemove', (e) => {
 document.addEventListener('mouseleave', () => {
     rectangle.style.transform = 'perspective(500px) rotateX(0deg) rotateY(0deg)';
 });
+
+const snowContainer = document.getElementById('snow-container');
+
+function createSnowflake() {
+    const snowflake = document.createElement('div');
+    snowflake.className = 'snowflake';
+    snowflake.style.left = Math.random() * 100 + 'vw';
+    snowflake.style.top = Math.random() * 100 + 'vw';
+    snowContainer.appendChild(snowflake);
+
+    snowflake.animate([
+        { transform: 'translateY(0)', opacity: 1 },
+        { transform: 'translateY(100vh)', opacity: 0 }
+    ], {
+        duration: Math.random() * 5000 + 5000, // Vary animation duration
+        iterations: Infinity
+    });
+
+    // Remove snowflake after animation completes
+    snowflake.addEventListener('animationend', () => {
+        snowflake.remove();
+        createSnowflake(); // Create a new snowflake to replace the removed one
+    });
+}
+
+// Create initial snowflakes
+for (let i = 0; i < 500; i++) {
+    createSnowflake();
+}
