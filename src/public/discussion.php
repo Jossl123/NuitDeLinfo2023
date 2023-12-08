@@ -1,6 +1,8 @@
 <div id="discussion" class="panel">
     <div id="header">
-        <button id="back" onclick="toConversations()"><-</button>
+        <button id="back" onclick="toConversations()">
+            <img src="/img/back.svg" alt="back"/>
+        </button>
     </div>
     <div id="messages">
         <div class="fix"></div>
