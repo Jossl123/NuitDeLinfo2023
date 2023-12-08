@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    background-color: #f3f3f3;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 0;
+    padding: 0;
+}
+
+canvas {
+    margin: 0 auto;
+    padding: 0;
+    display: block;
+    
+}

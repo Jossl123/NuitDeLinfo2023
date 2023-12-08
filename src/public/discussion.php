@@ -31,6 +31,6 @@
     </div>
     <div id="type_zone">
         <input type="text">
-        <button><span class="material-symbols-outlined">send</span></button>
+        <button onclick="youKnowWhatItMeans()"><span class="material-symbols-outlined">send</span></button>
     </div>
 </div>
