@@ -4,6 +4,11 @@
     background-repeat: no-repeat;
     background-position: center;
 }
+body{
+    background-image: url("../../img/hellback.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;}
 #conversations {
     background-color: rgba(0, 0, 0, 0) !important;
     border-radius: 1rem;

@@ -1,6 +1,11 @@
 html{
     background-color: pink ;
 }
+body{
+    background-image: url("../../img/loveback.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;}
 #phone{
     background-image: url("../../img/love.jpg");
     background-size: cover;
