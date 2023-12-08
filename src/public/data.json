@@ -77,8 +77,8 @@
                     "next": 3
                 },
                 {
-                    "msg": "La fonte des calottes glaciaires, c'est un rebondissement dans notre film de vie réelle. Devenons les héros avec le mantra : réduire, réutiliser, recycler. Écrivons une fin heureuse pour la planète !",
-                    "next": 8
+                    "msg": "La fonte des calottes glaciaires, c'est un rebondissement dans notre film de vie réelle. Devenons les héros avec le mantra : réduire, réutiliser, recycler. Je pars justement explorer le Pole Nord !",
+                    "next": 21
                 },
                 {
                     "msg": "Ouais, la fonte des calottes glaciaires, mec. C'est comme si le café du monde était dilué – pas cool. On devrait probablement faire quelque chose à ce sujet. Peut-être avoir plus de gobelets à café écologiques ou quelque chose comme ça. Je dis juste, gardons notre planète aussi géniale que notre café du matin, non ?",
@@ -234,8 +234,15 @@
     {
         "type":"ending",
         "content": {
-            "ending_name": "good_ending",
+            "ending_name": "love",
             "msg": "Ouah tu est vraiment quelqu'un de bien"
+        }
+    },
+    {
+        "type": "ending",
+        "content": {
+            "ending_name": "snow",
+            "msg": "Meurs pas de froid s'il te plaît ! Ou pas je m'en fou enfait."
         }
     }
 ]
