@@ -35,7 +35,8 @@
     {
         "type": "ending",
         "content": {
-            "ending_name": "Bad Ending (FEU)"
+            "ending_name": "hell",
+            "msg": "Beurk !"
         }
     },
     {
@@ -233,7 +234,8 @@
     {
         "type":"ending",
         "content": {
-            "ending_name": "Good Ending :)"
+            "ending_name": "good_ending",
+            "msg": "Ouah tu est vraiment quelqu'un de bien"
         }
     }
 ]
