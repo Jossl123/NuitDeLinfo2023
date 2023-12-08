@@ -1,0 +1,29 @@
+#phone{
+    background-image: url("../../img/hell2.jpg");
+    background-image: url("../../img/hell4.jpg");
+    background-image: url("../../img/hell5.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.panel {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-radius: 1rem;
+}
+#discussion #header{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+#discussion #messages{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+#discussion #text_zone{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+
+.message{
+    box-shadow: 0 0 40px 0 rgba(255, 0, 0, 0.8);
+    background-color: #FF4500;
+}
