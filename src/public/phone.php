@@ -12,7 +12,10 @@
 </head>
 <body>
     <div id="phone_out">
-        <div id="phone" id="lock">
+        <div id="phone">
+            <div id="phone-lock" class="panel">
+                <h1 id="hour">00:00</h1>
+            </div>
             <div id="conversations" class="panel">
             </div>
             <div id="discussion" class="panel">
@@ -29,10 +32,10 @@
                 </div>
             </div>
         </div>
-        <div id="lock">
     </div>
-    <div id="stat"> </div>
+    <div id="stat" > </div>
     <script src="./js/msgLogic.js"></script>
     <script src="./js/conversations.js"></script>
+    <script src="./js/unlock.js"></script>
 </body>
 </html>
