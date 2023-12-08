@@ -1,3 +1,36 @@
 html{
     background-color: pink ;
 }
+#phone{
+    background-image: url("../../img/love.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#conversations {
+    background-color: rgba(0, 0, 0, 0) !important;
+    border-radius: 1rem;
+}
+.conv{
+    background-color: #ff009e !important;
+}
+#discussion {
+    background-color: #ff819f !important;
+    border-radius: 1rem;
+}
+#discussion > *{
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+#discussion #choice{
+    border-radius: 0;
+    border-top: solid 0.1rem #ff819f;
+}
+
+.message{
+    box-shadow: 0 0 40px 0 #fea0ff;
+    background-color: #ff819f;
+}
+.you{
+    background-color: #cbb2ff ;
+}
