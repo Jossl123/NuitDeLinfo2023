@@ -25,5 +25,9 @@ switch ($path) {
     case '/rythm':
         include 'rythm.php';
         break;
+    case '/konami':
+        findEnding("konami");
+        include 'konami.html';
+        break;
     // Handle other routes as needed
 }

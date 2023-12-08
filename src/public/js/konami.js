@@ -17,7 +17,7 @@ function detectKonamiCode() {
     if (event.key === konamiCode[konamiIndex]) {
       konamiIndex++;
       if (konamiIndex === konamiCode.length) {
-        window.location.href = "Konami.html";
+        window.location.href = "/konami";
         konamiIndex = 0;
       }
     } else {
