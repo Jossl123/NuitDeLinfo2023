@@ -95,8 +95,6 @@
 
 // // Call show and log the result
 // show().then(result => console.log(result));
-
-var currentMsg = 0;
 var messagesDiv = document.getElementById("messages");
 
 function scrollToBottom() {

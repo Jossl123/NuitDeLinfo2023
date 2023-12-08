@@ -20,6 +20,9 @@
             <?php include("discussion.php"); ?>
         </div>
     </div>
+    <script>
+    var currentMsg = <?php echo getCurrentMsg(); ?>
+    </script>
     <script src="./js/msgLogic.js"></script>
     <script src="./js/phone.js"></script>
     <script src="./js/conversations.js"></script>
