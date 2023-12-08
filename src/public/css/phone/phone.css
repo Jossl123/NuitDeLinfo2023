@@ -4,18 +4,25 @@ html{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 body{
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
     display: flex;
+    align-items: center;
     justify-content: center;
 }
 #phone_out{
-    transition: transform 0.5s;
-    width: 42vh;
-    height: 80vh;
+    transition: transform 0.5s ease;
+    width: 47vh;
+    height: 90vh;
     background-color: black;
     border-radius: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+#phone_out:hover {
+    transform: none !important;
 }
 /* @keyframes rotateAnimation {
     0% {

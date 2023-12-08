@@ -6,7 +6,7 @@ function sendMsgData($data, $id, $add = true){
     if ($add){
         setCurrentMsg($id);
         addPreviousMsg($id);
-    }    
+    }   
     if($data[$id]->type=="ending")findEnding($data[$id]->content->ending_name);
     echo json_encode($data[$id]);
 }

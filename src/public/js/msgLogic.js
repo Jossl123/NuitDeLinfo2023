@@ -177,6 +177,8 @@ async function computeMsgData(msgData) {
 
         case "ending":
             await sendMsg(msgData.content.ending_name);
+            alert("You've unlocked a new ending "+ msgData.content.ending_name)
+            document.location.href="/"
             break;
 
         case "error":
