@@ -2,9 +2,9 @@
 session_start();
 $raw = file_get_contents('./data.json');
 $data = json_decode($raw);
-$themes =["default", "love", "hell", "konami"];
+$themes =["default", "love", "hell", "konami", "love"];
 if (!isset($_SESSION["user"])){
-    $userData = array("currentMsg" => 0, "previousMsg" => array(), "themes" => array("konami"), "currentTheme" => "konami", "firstConnection" => true);
+    $userData = array("currentMsg" => 0, "previousMsg" => array(), "themes" => array("love"), "currentTheme" => "love", "firstConnection" => true);
     $_SESSION["user"] = json_encode($userData);
 }else{
     $s = json_decode($_SESSION["user"], true);
