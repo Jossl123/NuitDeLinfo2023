@@ -14,5 +14,11 @@ switch ($uri) {
     case '/':
         include 'phone.php';
         break;
+    case '/restart':
+        echo "yolo";
+        include("check_session.php");
+        $_SESSION = array();
+        header('Location: /');
+        break;
     // Handle other routes as needed
 }
