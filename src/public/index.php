@@ -26,8 +26,14 @@ switch ($path) {
         include 'rythm.php';
         break;
     case '/konami':
-        findEnding("konami");
-        include 'konami.html';
+        if (isset($_COOKIE["kokonamimino"]) && $_COOKIE["kokonamimino"] == "yaaa"){
+            unset($_COOKIE["kokonamimino"]);
+            setcookie("kokonamimino", "", time()-3600);
+            findEnding("konami");
+            include 'konami.html';
+            break;
+        }
+        header('Location: /');
         break;
     // Handle other routes as needed
 }
