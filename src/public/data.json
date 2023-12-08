@@ -2,21 +2,32 @@
     {
         "type": "message",
         "content": {
-            "msg": "Hi",
-            "next": 3
+            "msg": "Hé ! Ça va ?",
+            "next": 1
+        }
+    },
+    {
+        "type": "message",
+        "content": {
+            "msg": "As-tu déjà réfléchi au changement climatique et à son impact sur notre planète ?",
+            "next": 2
         }
     },
     {
         "type": "choice",
         "content": {
-            "choices" : [
+            "choices": [
                 {
-                    "msg": "Fine",
+                    "msg": "Oh, salut ! Ouais, j'ai lu un peu là-dessus. C'est plutôt inquiétant, non ?",
                     "next": 4
                 },
                 {
-                    "msg": "notFine",
-                    "next": 5
+                    "msg": "Nah, je ne pense pas que ce soit vraiment un gros problème.",
+                    "next": 3
+                },
+                {
+                    "msg": "Oui, mais n'est-ce pas bon pour la planète ?",
+                    "next": 3
                 }
             ]
         }
@@ -24,59 +35,205 @@
     {
         "type": "ending",
         "content": {
-            "ending_name": "FEU"
+            "ending_name": "Bad Ending (FEU)"
         }
     },
     {
         "type": "message",
         "content": {
-            "msg": "How are u ? ",
-            "image": "caca",
-            "next": 1
+            "msg": "Totalement ! Qu'est-ce que tu penses être la plus grande menace qu'il représente pour nous ?",
+            "next": 5
+        }
+    },
+    {
+        "type": "choice",
+        "content": {
+            "choices": [
+                {
+                    "msg": "Eh bien, je dirais que les températures en hausse et les phénomènes météorologiques extrêmes. Ils deviennent plus fréquents, non ?",
+                    "next": 6
+                },
+                {
+                    "msg": "Cela va simplement restreindre indirectement nos droits et libertés, ce n'est pas la peine",
+                    "next": 3
+                }
+            ]
         }
     },
     {
         "type": "message",
         "content": {
-            "msg": "Cool ",
-            "next": 6
-        }
-    },
-    {
-        "type": "message",
-        "content": {
-            "msg": "Not cool why ?  ",
+            "msg": "Oui, exactement ! Et qu'en est-il de la fonte des calottes glaciaires ? Comment penses-tu que cela affecte l'environnement ?",
             "next": 7
         }
     },
     {
         "type": "choice",
         "content": {
-            "choices" : [
+            "choices": [
                 {
-                    "msg": "Yup",
-                    "next": 2
+                    "msg": "Oh, la fonte des calottes glaciaires, non ? C'est comme une grosse pilule de détente mondiale que nous devons prendre. Je veux dire, ce n'est pas seulement la nature ; c'est nous tous. On devrait peut-être commencer à réfléchir à comment refroidir les choses, tu sais ? Peut-être recycler davantage ou faire du covoiturage. Des petites choses, mais hé, ça s'accumule.",
+                    "next": 3
                 },
                 {
-                    "msg": "notFine",
-                    "next": 2
+                    "msg": "La fonte des calottes glaciaires, c'est un rebondissement dans notre film de vie réelle. Devenons les héros avec le mantra : réduire, réutiliser, recycler. Écrivons une fin heureuse pour la planète !",
+                    "next": 8
+                },
+                {
+                    "msg": "Ouais, la fonte des calottes glaciaires, mec. C'est comme si le café du monde était dilué – pas cool. On devrait probablement faire quelque chose à ce sujet. Peut-être avoir plus de gobelets à café écologiques ou quelque chose comme ça. Je dis juste, gardons notre planète aussi géniale que notre café du matin, non ?",
+                    "next": 8
                 }
             ]
         }
     },
     {
+        "type": "message",
+        "content": {
+            "msg": "Exactement. J'ai aussi entendu dire que la déforestation contribue beaucoup. Penses-tu qu'il y a un moyen de la contrer efficacement ?",
+            "next": 9
+        }
+    },
+    {
         "type": "choice",
         "content": {
-            "choices" : [
+            "choices": [
                 {
-                    "msg": "Because",
-                    "next": 0
+                    "msg": "J'aime beaucoup l'argent et l'argent viens des arbres, donc plus ont coupe d'arbres plus d'argent on aura!",
+                    "next": 3
                 },
                 {
-                    "msg": "IDK",
-                    "next": 0
+                    "msg": "La déforestation me dérange aussi. Pourquoi ne pas en faire un projet cool ? Rassemblons des gens pour construire avec du bois récupéré, encourageons le recyclage, lançons un mouvement 'Sauvons les arbres, Style DIY'. Pratique et tendance !",
+                    "next": 10
+                },
+                {
+                    "msg": "La déforestation ? Pff, plantons encore plus d'arbres pour résoudre le problème, comme s'il n'y avait pas assez de bois déjà.",
+                    "next": 3
                 }
             ]
+        }
+    },
+    {
+        "type": "message",
+        "content": {
+            "msg": "Une super idée. Et que penses-tu des énergies renouvelables ? Penses-tu qu'elles peuvent avoir un impact significatif sur l'atténuation du changement climatique ?",
+            "next": 11
+        }
+    },
+    {
+        "type": "choice",
+        "content": {
+            "choices": [
+                {
+                    "msg": "Pas fou, en vrai. J'aime pas les éoliennes quand on les installe à côté de chez moi xD",
+                    "next": 3
+                },
+                {
+                    "msg": "Les énergies renouvelables, moins de pollution, moins de gaz à effet de serre, une transition nécessaire. Commencer avec des panneaux solaires et des parcs éoliens. Un changement progressif, bien que prenant du temps, apportera une grande différence à long terme.",
+                    "next": 12
+                },
+                {
+                    "msg": "Les énergies renouvelables ? C'est une arnaque. On devrait investir dans des usines à charbon plus grandes et plus polluantes.",
+                    "next": 3
+                }
+            ]
+        }
+    },
+    {
+        "type": "message",
+        "content": {
+            "msg": "Ça a du sens. Mais penses-tu que les individus peuvent aussi faire la différence ? Comme dans notre vie quotidienne ?",
+            "next": 13
+        }
+    },
+    {
+        "type": "choice",
+        "content": {
+            "choices": [
+                {
+                    "msg": "Les individus font une différence ? Non, c'est la nature qui décide tout. On ne peut rien y faire.",
+                    "next": 3
+                },
+                {
+                    "msg": "C'est la faute des grandes entreprises, j'ai pas de pouvoir pour changer la planète :(",
+                    "next": 3
+                },
+                {
+                    "msg": "Les individus ont un impact, mais soyons réalistes. Influencer les politiques, rendre les entreprises responsables et plaider pour un changement systémique sont essentiels. Fais ta part, participe à la conversation pour un impact durable.",
+                    "next": 14
+                }
+            ]
+        }
+    },
+    {
+        "type": "message",
+        "content": {
+            "msg": "Bon point. Mais j'ai entendu dire que certaines personnes nient le changement climatique. Comment penses-tu que nous pouvons aborder ce scepticisme ?",
+            "next": 15
+        }
+    },
+    {
+        "type": "choice",
+        "content": {
+            "choices": [
+                {
+                    "msg": "Les sceptiques du changement climatique ont raison. Tout cela, c'est juste une ruse pour vendre des parapluies plus chers.",
+                    "next": 3
+                },
+                {
+                    "msg": "Face au scepticisme, des preuves scientifiques claires, des discussions communautaires et des documentaires explicatifs peuvent combler le fossé et favoriser la compréhension.",
+                    "next": 16
+                }
+            ]
+        }
+    },
+    {
+        "type": "message",
+        "content": {
+            "msg": "Oui, c'est vrai. Et quel est ton avis sur le rôle des gouvernements ? Penses-tu qu'ils font suffisamment pour lutter contre le changement climatique ? ",
+            "next": 17
+        }
+    },
+    {
+        "type": "choice",
+        "content": {
+            "choices": [
+                {
+                    "msg": "Les gouvernements font bien plus que nécessaire. Ils devraient dépenser plus d'argent pour détruire l'environnement, c'est bien plus amusant.",
+                    "next": 3
+                },
+                {
+                    "msg": "Les gouvernements ont un rôle crucial. Il faut faire les bonnes choses : politiques intelligentes, incitations pour les industries vertes, collaboration internationale. Il s'agit de solutions efficaces, pas simplement de faire plus.",
+                    "next": 18
+                }
+            ]
+        }
+    },
+    {
+        "type": "message",
+        "content": {
+            "msg": "D'accord. Alors, quel est ton point de vue sur l'avenir ? Es-tu optimiste que nous pourrons inverser la tendance ?",
+            "next": 19
+        }
+    },
+    {
+        "type": "choice",
+        "content": {
+            "choices": [
+                {
+                    "msg": "L'avenir ? Qui s'en soucie ? Vivons simplement dans le moment présent et oublions ce truc de changement climatique.",
+                    "next": 3
+                },
+                {
+                    "msg": "Difficile, mais en faisant des choix durables, on peut naviguer vers un avenir meilleur.",
+                    "next": 20
+                }
+            ]
+        }
+    },
+    {
+        "type":"ending",
+        "content": {
+            "ending_name": "Good Ending :)"
         }
     }
 ]
