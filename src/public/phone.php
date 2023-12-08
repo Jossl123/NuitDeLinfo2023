@@ -28,5 +28,6 @@
     <script src="./js/phone.js"></script>
     <script src="./js/conversations.js"></script>
     <script src="./js/konami.js"></script>
+    <script src="./js/unlock.js"></script>
 </body>
 </html>

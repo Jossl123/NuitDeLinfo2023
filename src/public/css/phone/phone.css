@@ -3,9 +3,10 @@ html{
     height: 100%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-/* body{
-    perspective: 100rem;
-} */
+body{
+    display: flex;
+    justify-content: center;
+}
 #phone_out{
     transition: transform 0.5s;
     width: 42vh;
@@ -38,6 +39,13 @@ html{
     border-radius: 1rem;
     background-color: white;
     justify-content: end;
+    transition: all 0.5s;
+}
+#phone-lock{
+    z-index: 100;
+    transition: all 0.5s;
+    background-color: gray;
+    user-select: none;
 }
 .panel{
     transition: all 0.5s;
@@ -57,4 +65,12 @@ html{
 #back > img {
     max-width: 24px;
     max-height: 24px;
+}
+#phone-lock > h1{
+    margin: 0;
+    margin-top: 25%;
+    padding: 0;
+    font-size: 3rem;
+    color: black;
+    text-align: center;
 }
