@@ -198,5 +198,5 @@ main();
 
 
 function youKnowWhatItMeans(){
-    document.location.href="/rythm"
+    if (document.getElementById("type_zone_input").value.length > 0)document.location.href="/rythm";
 }

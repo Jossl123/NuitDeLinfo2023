@@ -30,7 +30,7 @@
     <div id="choice">
     </div>
     <div id="type_zone">
-        <input type="text">
+        <input type="text" id="type_zone_input">
         <button onclick="youKnowWhatItMeans()"><span class="material-symbols-outlined">send</span></button>
     </div>
 </div>
