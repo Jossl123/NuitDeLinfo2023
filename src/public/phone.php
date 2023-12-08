@@ -15,6 +15,7 @@
 <body>
     <div id="phone_out">
         <div id="phone">
+            <?php include("lock.php"); ?>
             <?php include("parameters.php"); ?>
             <?php include("conversations.php"); ?>
             <?php include("discussion.php"); ?>
@@ -28,5 +29,6 @@
     <script src="./js/phone.js"></script>
     <script src="./js/conversations.js"></script>
     <script src="./js/konami.js"></script>
+    <script src="./js/unlock.js"></script>
 </body>
 </html>
