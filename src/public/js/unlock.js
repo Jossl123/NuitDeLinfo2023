@@ -17,23 +17,33 @@ let unlockThreshold = phoneLock.clientHeight /2;
 phoneLock.addEventListener('mousedown', function(e){
     isDragging = true;
     startY = e.clientY;
+    const diffdist = phoneLock.getBoundingClientRect().top - phoneUnlock.getBoundingClientRect().top;
+    if(-diffdist > unlockThreshold){
+        phoneLock.style.display = 'none';
+        clearInterval(idHour);
+    }
 });
 
 phoneLock.addEventListener('mousemove', function(e){
+    let deltaY = 0;
     if(isDragging){
-        const deltaY = e.clientY - startY;
-        const diffdist = phoneLock.getBoundingClientRect().top - phoneUnlock.getBoundingClientRect().top;
-        phoneLock.style.transform = `translateY(${Math.min(deltaY,0)}px )`;
-        if(-diffdist > unlockThreshold){
-            phoneLock.style.display = 'none';
-            clearInterval(idHour);
-            const stat = document.getElementById('stat');
-            stat.classList.toggle("enlarged")
-        }
+        deltaY = e.clientY - startY;
+    }
+    phoneLock.style.transform = `translateY(${Math.min(deltaY,0)}px )`;
+    console.log("test")
+    const diffdist = phoneLock.getBoundingClientRect().top - phoneUnlock.getBoundingClientRect().top;
+    if(-diffdist > unlockThreshold){
+        phoneLock.style.display = 'none';
+        clearInterval(idHour);
     }
 });
 
 phoneLock.addEventListener('mouseup', function(e){
     isDragging = false;
     phoneLock.style.transform = ``;
+    const diffdist = phoneLock.getBoundingClientRect().top - phoneUnlock.getBoundingClientRect().top;
+    if(-diffdist > unlockThreshold){
+        phoneLock.style.display = 'none';
+        clearInterval(idHour);
+    }
 });
