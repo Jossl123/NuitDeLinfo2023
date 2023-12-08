@@ -8,6 +8,8 @@ Défis : Konamicode
 
 Jeu deRythme : pour y accéder dévérouiller le téléphone, allez dans la conversation, entrez un texte aléatoire et et cliqué sur envoyé 
 
+Charlie est caché.
+
 Jeu  themes : 5 themes différents : 
 default, xmas, hell, love, konami
 default : Par défault au premier lancement du site
