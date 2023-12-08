@@ -3,7 +3,7 @@
         <img src="img/settings.svg" alt="settings"/>
     </button>
     <button class="conv" onclick="toDiscussion()">
-        <div><img src="./img/caca.png" alt=""></div>
-        <p>Lea</p>
+        <div><img src="./img/lea.jpeg" alt=""></div>
+        <h2>Lea</h2>
     </button>
 </div>

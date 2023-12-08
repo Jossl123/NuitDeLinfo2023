@@ -3,6 +3,7 @@
         <button id="back" onclick="toConversations()">
             <img src="/img/back.svg" alt="back"/>
         </button>
+        <h2>Lea</h2>
     </div>
     <div id="messages">
         <div class="fix"></div>
