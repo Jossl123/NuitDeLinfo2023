@@ -16,6 +16,18 @@
     padding: 0;
     margin: 0;
 }
+#back {
+    border: none;
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    cursor: pointer;
+}
+
+#back > img {
+    max-width: 100%;
+}
+
 #discussion #type_zone{
     bottom: 0;
 }

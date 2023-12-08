@@ -57,13 +57,3 @@ body{
 
 #discussion{left: 100%;}
 #parameters{top: -100%;}
-
-#back {
-    border: none;
-    border-radius: 50%;
-}
-
-#back > img {
-    max-width: 24px;
-    max-height: 24px;
-}

@@ -38,9 +38,12 @@
     border: none;
     border-radius: 50%;
     margin: 6px;
+    width: 3rem;
+    height: 3rem;
+    object-fit: cover;
+    cursor: pointer;
 }
+#param > img{
 
-#param > img {
-    max-width: 24px;
-    max-height: 24px;
+    max-width:100%;
 }
